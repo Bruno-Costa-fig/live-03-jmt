@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Jogo de adivinhação</h1>
+    <script>
+        let numeroSecreto = Math.floor(Math.random() * 10) + 1;
+        let tentativas = 0;
+        let acertou = false;
+
+        do {
+            let palpite = Number(prompt("Digite o seu palpite: "))
+            tentativas++;
+            if(palpite == numeroSecreto){
+                alert("Parabéns, você acertou o número secreto!")
+                alert("Você usou " + tentativas + " tentativas")
+                acertou = true
+            } else {
+                alert("Você errou!")
+            }
+        } while (!acertou)
+    </script>
+</body>
+</html>
